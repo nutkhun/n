@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Gallery - StoryWork</title>
+    <link rel="stylesheet" href="css/a24-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="index-a24.html" class="logo">STORYWORK</a>
+            </div>
+            <ul>
+                <li><a href="admin-dashboard-a24.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="admin-portfolio-a24.html"><i class="fas fa-film"></i> Portfolio</a></li>
+                <li><a href="admin-gallery-a24.html" class="active"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="admin-about-a24.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="admin-contact-a24.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin-settings-a24.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="index-a24.html"><i class="fas fa-eye"></i> View Site</a></li>
+                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="dashboard-content">
+            <h1>Gallery Management</h1>
+            
+            <!-- Add New Gallery Item -->
+            <div class="admin-form">
+                <h2>Add New Gallery Item</h2>
+                <form id="galleryForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" class="form-control" required>
+                            <option value="">Select Category</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Key Visual">Key Visual</option>
+                            <option value="Portrait">Portrait</option>
+                            <option value="Landscape">Landscape</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" id="image" class="form-control" accept="image/*" required>
+                        <div class="image-preview" id="imagePreview"></div>
+                    </div>
+                    <button type="submit" class="btn">Add Gallery Item</button>
+                </form>
+            </div>
+            
+            <!-- Manage Gallery Items -->
+            <div class="admin-list">
+                <h2>Manage Gallery Items</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                    <!-- Gallery Item 1 -->
+                    <div style="position: relative; overflow: hidden; border-radius: 4px;">
+                        <img src="img/gallery/commercial1.jpg" alt="Gallery Image" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);">
+                            <h3 style="font-size: 1rem; margin-bottom: 5px;">Product Campaign</h3>
+                            <p style="font-size: 0.8rem; color: var(--primary-color);">Commercial</p>
+                        </div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column;">
+                            <button class="btn-icon edit-btn" style="margin-bottom: 5px;"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 2 -->
+                    <div style="position: relative; overflow: hidden; border-radius: 4px;">
+                        <img src="img/gallery/keyvisual1.jpg" alt="Gallery Image" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);">
+                            <h3 style="font-size: 1rem; margin-bottom: 5px;">Brand Identity</h3>
+                            <p style="font-size: 0.8rem; color: var(--primary-color);">Key Visual</p>
+                        </div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column;">
+                            <button class="btn-icon edit-btn" style="margin-bottom: 5px;"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 3 -->
+                    <div style="position: relative; overflow: hidden; border-radius: 4px;">
+                        <img src="img/gallery/portrait1.jpg" alt="Gallery Image" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);">
+                            <h3 style="font-size: 1rem; margin-bottom: 5px;">Celebrity Portrait</h3>
+                            <p style="font-size: 0.8rem; color: var(--primary-color);">Portrait</p>
+                        </div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column;">
+                            <button class="btn-icon edit-btn" style="margin-bottom: 5px;"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 4 -->
+                    <div style="position: relative; overflow: hidden; border-radius: 4px;">
+                        <img src="img/gallery/landscape1.jpg" alt="Gallery Image" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);">
+                            <h3 style="font-size: 1rem; margin-bottom: 5px;">Location Scouting</h3>
+                            <p style="font-size: 0.8rem; color: var(--primary-color);">Landscape</p>
+                        </div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column;">
+                            <button class="btn-icon edit-btn" style="margin-bottom: 5px;"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                    <button class="btn-icon" style="margin-right: 5px;"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn-icon" style="background-color: var(--primary-color); margin-right: 5px;">1</button>
+                    <button class="btn-icon" style="margin-right: 5px;">2</button>
+                    <button class="btn-icon" style="margin-right: 5px;">3</button>
+                    <button class="btn-icon"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Authentication Check
+        document.addEventListener('DOMContentLoaded', () => {
+            const isAuthenticated = localStorage.getItem('adminAuthenticated');
+            
+            if (!isAuthenticated || isAuthenticated !== 'true') {
+                window.location.href = 'admin-a24.html';
+            }
+            
+            // Image Preview
+            const imageInput = document.getElementById('image');
+            const imagePreview = document.getElementById('imagePreview');
+            
+            imageInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    
+                    reader.addEventListener('load', function() {
+                        imagePreview.innerHTML = `<img src="${this.result}" alt="Image Preview" style="max-width: 100%;">`;
+                    });
+                    
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+        
+        // Logout Function
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            localStorage.removeItem('adminAuthenticated');
+            window.location.href = 'admin-a24.html';
+        });
+        
+        // Gallery Form Submission (Demo)
+        const galleryForm = document.getElementById('galleryForm');
+        
+        galleryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real implementation, this would send the form data to a server
+            alert('This is a demo - in a real implementation, this gallery item would be added to the database.');
+            
+            // Reset form
+            galleryForm.reset();
+            document.getElementById('imagePreview').innerHTML = '';
+        });
+        
+        // Edit Button (Demo)
+        const editButtons = document.querySelectorAll('.edit-btn');
+        
+        editButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('This is a demo - in a real implementation, this would open an edit form for the selected gallery item.');
+            });
+        });
+        
+        // Delete Button (Demo)
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (confirm('Are you sure you want to delete this gallery item?')) {
+                    alert('This is a demo - in a real implementation, this gallery item would be deleted from the database.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

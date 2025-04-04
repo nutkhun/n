@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Settings - StoryWork</title>
+    <link rel="stylesheet" href="css/a24-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="index-a24.html" class="logo">STORYWORK</a>
+            </div>
+            <ul>
+                <li><a href="admin-dashboard-a24.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="admin-portfolio-a24.html"><i class="fas fa-film"></i> Portfolio</a></li>
+                <li><a href="admin-gallery-a24.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="admin-about-a24.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="admin-contact-a24.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin-settings-a24.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="index-a24.html"><i class="fas fa-eye"></i> View Site</a></li>
+                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="dashboard-content">
+            <h1>Website Settings</h1>
+            
+            <!-- General Settings -->
+            <div class="admin-form">
+                <h2>General Settings</h2>
+                <form id="generalSettingsForm">
+                    <div class="form-group">
+                        <label for="siteName">Site Name</label>
+                        <input type="text" id="siteName" class="form-control" value="STORYWORK" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tagline">Tagline</label>
+                        <input type="text" id="tagline" class="form-control" value="Film Director & Photographer">
+                    </div>
+                    <div class="form-group">
+                        <label for="favicon">Favicon</label>
+                        <input type="file" id="favicon" class="form-control" accept="image/png, image/x-icon">
+                        <div class="image-preview" id="faviconPreview">
+                            <img src="img/favicon.png" alt="Favicon Preview" style="max-width: 32px;">
+                        </div>
+                        <p style="font-size: 0.9rem; margin-top: 5px; opacity: 0.7;">Recommended size: 32x32 pixels. PNG or ICO format.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="logo">Logo</label>
+                        <input type="file" id="logo" class="form-control" accept="image/*">
+                        <p style="font-size: 0.9rem; margin-top: 5px; opacity: 0.7;">Leave blank to use text logo (Site Name).</p>
+                    </div>
+                    <button type="submit" class="btn">Update General Settings</button>
+                </form>
+            </div>
+            
+            <!-- Theme Settings -->
+            <div class="admin-form" style="margin-top: 30px;">
+                <h2>Theme Settings</h2>
+                <form id="themeSettingsForm">
+                    <div class="form-group">
+                        <label for="primaryColor">Primary Color</label>
+                        <div style="display: flex; align-items: center;">
+                            <input type="color" id="primaryColor" value="#FF5500" style="width: 50px; height: 50px; padding: 0; border: none;">
+                            <input type="text" id="primaryColorHex" class="form-control" value="#FF5500" style="margin-left: 10px;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="backgroundColor">Background Color</label>
+                        <div style="display: flex; align-items: center;">
+                            <input type="color" id="backgroundColor" value="#000000" style="width: 50px; height: 50px; padding: 0; border: none;">
+                            <input type="text" id="backgroundColorHex" class="form-control" value="#000000" style="margin-left: 10px;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="textColor">Text Color</label>
+                        <div style="display: flex; align-items: center;">
+                            <input type="color" id="textColor" value="#FFFFFF" style="width: 50px; height: 50px; padding: 0; border: none;">
+                            <input type="text" id="textColorHex" class="form-control" value="#FFFFFF" style="margin-left: 10px;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="headingFont">Heading Font</label>
+                        <select id="headingFont" class="form-control">
+                            <option value="Montserrat" selected>Montserrat</option>
+                            <option value="Roboto">Roboto</option>
+                            <option value="Open Sans">Open Sans</option>
+                            <option value="Playfair Display">Playfair Display</option>
+                            <option value="Helvetica">Helvetica</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bodyFont">Body Font</label>
+                        <select id="bodyFont" class="form-control">
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Roboto">Roboto</option>
+                            <option value="Open Sans" selected>Open Sans</option>
+                            <option value="Lato">Lato</option>
+                            <option value="Arial">Arial</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Update Theme Settings</button>
+                </form>
+            </div>
+            
+            <!-- Account Settings -->
+            <div class="admin-form" style="margin-top: 30px;">
+                <h2>Account Settings</h2>
+                <form id="accountSettingsForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" class="form-control" value="admin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" value="admin@storyworkbkk.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password</label>
+                        <input type="password" id="currentPassword" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" class="form-control">
+                        <p style="font-size: 0.9rem; margin-top: 5px; opacity: 0.7;">Leave blank to keep current password.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm New Password</label>
+                        <input type="password" id="confirmPassword" class="form-control">
+                    </div>
+                    <button type="submit" class="btn">Update Account Settings</button>
+                </form>
+            </div>
+            
+            <!-- Backup & Restore -->
+            <div class="admin-form" style="margin-top: 30px;">
+                <h2>Backup & Restore</h2>
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Backup Website</h3>
+                    <p style="margin-bottom: 15px;">Create a backup of your website content and settings.</p>
+                    <button class="btn" id="backupBtn">Create Backup</button>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Restore Website</h3>
+                    <p style="margin-bottom: 15px;">Restore your website from a previous backup.</p>
+                    <div class="form-group">
+                        <input type="file" id="restoreFile" class="form-control" accept=".zip">
+                    </div>
+                    <button class="btn" id="restoreBtn">Restore Backup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Authentication Check
+        document.addEventListener('DOMContentLoaded', () => {
+            const isAuthenticated = localStorage.getItem('adminAuthenticated');
+            
+            if (!isAuthenticated || isAuthenticated !== 'true') {
+                window.location.href = 'admin-a24.html';
+            }
+            
+            // Favicon Preview
+            const faviconInput = document.getElementById('favicon');
+            const faviconPreview = document.getElementById('faviconPreview');
+            
+            faviconInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    
+                    reader.addEventListener('load', function() {
+                        faviconPreview.innerHTML = `<img src="${this.result}" alt="Favicon Preview" style="max-width: 32px;">`;
+                    });
+                    
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Color Input Sync
+            const primaryColor = document.getElementById('primaryColor');
+            const primaryColorHex = document.getElementById('primaryColorHex');
+            const backgroundColor = document.getElementById('backgroundColor');
+            const backgroundColorHex = document.getElementById('backgroundColorHex');
+            const textColor = document.getElementById('textColor');
+            const textColorHex = document.getElementById('textColorHex');
+            
+            primaryColor.addEventListener('input', () => {
+                primaryColorHex.value = primaryColor.value;
+            });
+            
+            primaryColorHex.addEventListener('input', () => {
+                primaryColor.value = primaryColorHex.value;
+            });
+            
+            backgroundColor.addEventListener('input', () => {
+                backgroundColorHex.value = backgroundColor.value;
+            });
+            
+            backgroundColorHex.addEventListener('input', () => {
+                backgroundColor.value = backgroundColorHex.value;
+            });
+            
+            textColor.addEventListener('input', () => {
+                textColorHex.value = textColor.value;
+            });
+            
+            textColorHex.addEventListener('input', () => {
+                textColor.value = textColorHex.value;
+            });
+        });
+        
+        // Logout Function
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            localStorage.removeItem('adminAuthenticated');
+            window.location.href = 'admin-a24.html';
+        });
+        
+        // General Settings Form Submission (Demo)
+        const generalSettingsForm = document.getElementById('generalSettingsForm');
+        
+        generalSettingsForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real implementation, this would send the form data to a server
+            alert('This is a demo - in a real implementation, your general settings would be updated in the database.');
+        });
+        
+        // Theme Settings Form Submission (Demo)
+        const themeSettingsForm = document.getElementById('themeSettingsForm');
+        
+        themeSettingsForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real implementation, this would send the form data to a server
+            alert('This is a demo - in a real implementation, your theme settings would be updated in the database.');
+        });
+        
+        // Account Settings Form Submission (Demo)
+        const accountSettingsForm = document.getElementById('accountSettingsForm');
+        
+        accountSettingsForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (newPassword && newPassword !== confirmPassword) {
+                alert('New passwords do not match. Please try again.');
+                return;
+            }
+            
+            // In a real implementation, this would send the form data to a server
+            alert('This is a demo - in a real implementation, your account settings would be updated in the database.');
+        });
+        
+        // Backup Button (Demo)
+        document.getElementById('backupBtn').addEventListener('click', () => {
+            alert('This is a demo - in a real implementation, this would create a backup of your website content and settings.');
+        });
+        
+        // Restore Button (Demo)
+        document.getElementById('restoreBtn').addEventListener('click', () => {
+            const restoreFile = document.getElementById('restoreFile').files[0];
+            
+            if (!restoreFile) {
+                alert('Please select a backup file to restore.');
+                return;
+            }
+            
+            if (confirm('Are you sure you want to restore your website from this backup? This will overwrite your current content and settings.')) {
+                alert('This is a demo - in a real implementation, this would restore your website from the selected backup file.');
+            }
+        });
+    </script>
+</body>
+</html>

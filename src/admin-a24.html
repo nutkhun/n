@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - StoryWork</title>
+    <link rel="stylesheet" href="css/a24-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon.png">
+    <style>
+        .login-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--background-color);
+        }
+        
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background-color: var(--secondary-background);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .login-logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .login-logo a {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+        
+        .login-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .login-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .login-form .form-control {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            transition: border-color var(--transition-speed) ease;
+        }
+        
+        .login-form .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .login-form .btn {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        
+        .login-footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .login-footer a {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <div class="login-logo">
+                <a href="index-a24.html">STORYWORK</a>
+            </div>
+            <h1 class="login-title">Admin Login</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="login-footer">
+                <p>&copy; 2025 StoryWork. All rights reserved.</p>
+                <p><a href="index-a24.html">Return to Website</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Simple client-side authentication for demo purposes
+            // In a real implementation, this would be handled securely on the server
+            if (username === 'admin' && password === 'password') {
+                // Store authentication state
+                localStorage.setItem('adminAuthenticated', 'true');
+                
+                // Redirect to admin dashboard
+                window.location.href = 'admin-dashboard-a24.html';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portfolio - StoryWork</title>
+    <link rel="stylesheet" href="css/a24-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="index-a24.html" class="logo">STORYWORK</a>
+            </div>
+            <ul>
+                <li><a href="admin-dashboard-a24.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="admin-portfolio-a24.html" class="active"><i class="fas fa-film"></i> Portfolio</a></li>
+                <li><a href="admin-gallery-a24.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="admin-about-a24.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="admin-contact-a24.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin-settings-a24.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="index-a24.html"><i class="fas fa-eye"></i> View Site</a></li>
+                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="dashboard-content">
+            <h1>Portfolio Management</h1>
+            
+            <!-- Add New Portfolio Item -->
+            <div class="admin-form">
+                <h2>Add New Portfolio Item</h2>
+                <form id="portfolioForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" class="form-control" required>
+                            <option value="">Select Category</option>
+                            <option value="TVC">TVC</option>
+                            <option value="Music Video">Music Video</option>
+                            <option value="Short Film">Short Film</option>
+                            <option value="Presentation">Presentation</option>
+                            <option value="Web Film">Web Film</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="text" id="year" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="videoUrl">Video URL (YouTube or Vimeo)</label>
+                        <input type="text" id="videoUrl" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="thumbnail">Thumbnail Image</label>
+                        <input type="file" id="thumbnail" class="form-control" accept="image/*" required>
+                        <div class="image-preview" id="thumbnailPreview"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="credits">Credits</label>
+                        <textarea id="credits" class="form-control" placeholder="Director: Your Name&#10;Client: Brand Name&#10;Agency: Agency Name&#10;Production: Production Company"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Add Portfolio Item</button>
+                </form>
+            </div>
+            
+            <!-- Manage Portfolio Items -->
+            <div class="admin-list">
+                <h2>Manage Portfolio Items</h2>
+                <div class="admin-table">
+                    <div class="admin-table-header">
+                        <div class="admin-table-cell">Thumbnail</div>
+                        <div class="admin-table-cell">Title</div>
+                        <div class="admin-table-cell">Category</div>
+                        <div class="admin-table-cell">Year</div>
+                        <div class="admin-table-cell">Actions</div>
+                    </div>
+                    <!-- Portfolio Item 1 -->
+                    <div class="admin-table-row">
+                        <div class="admin-table-cell">
+                            <img src="img/portfolio/placeholder1.jpg" alt="Thumbnail" style="width: 80px; height: 45px; object-fit: cover;">
+                        </div>
+                        <div class="admin-table-cell">Luxury Brand Campaign</div>
+                        <div class="admin-table-cell">TVC</div>
+                        <div class="admin-table-cell">2025</div>
+                        <div class="admin-table-cell">
+                            <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete-btn"><i class="fas fa-trash"></i></button>
+                            <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div class="admin-table-row">
+                        <div class="admin-table-cell">
+                            <img src="img/portfolio/placeholder2.jpg" alt="Thumbnail" style="width: 80px; height: 45px; object-fit: cover;">
+                        </div>
+                        <div class="admin-table-cell">Artist Collaboration</div>
+                        <div class="admin-table-cell">Music Video</div>
+                        <div class="admin-table-cell">2024</div>
+                        <div class="admin-table-cell">
+                            <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete-btn"><i class="fas fa-trash"></i></button>
+                            <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3 -->
+                    <div class="admin-table-row">
+                        <div class="admin-table-cell">
+                            <img src="img/portfolio/placeholder3.jpg" alt="Thumbnail" style="width: 80px; height: 45px; object-fit: cover;">
+                        </div>
+                        <div class="admin-table-cell">Documentary Short</div>
+                        <div class="admin-table-cell">Short Film</div>
+                        <div class="admin-table-cell">2024</div>
+                        <div class="admin-table-cell">
+                            <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete-btn"><i class="fas fa-trash"></i></button>
+                            <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4 -->
+                    <div class="admin-table-row">
+                        <div class="admin-table-cell">
+                            <img src="img/portfolio/placeholder4.jpg" alt="Thumbnail" style="width: 80px; height: 45px; object-fit: cover;">
+                        </div>
+                        <div class="admin-table-cell">Product Launch</div>
+                        <div class="admin-table-cell">TVC</div>
+                        <div class="admin-table-cell">2023</div>
+                        <div class="admin-table-cell">
+                            <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon delete-btn"><i class="fas fa-trash"></i></button>
+                            <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Authentication Check
+        document.addEventListener('DOMContentLoaded', () => {
+            const isAuthenticated = localStorage.getItem('adminAuthenticated');
+            
+            if (!isAuthenticated || isAuthenticated !== 'true') {
+                window.location.href = 'admin-a24.html';
+            }
+            
+            // Thumbnail Preview
+            const thumbnailInput = document.getElementById('thumbnail');
+            const thumbnailPreview = document.getElementById('thumbnailPreview');
+            
+            thumbnailInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    
+                    reader.addEventListener('load', function() {
+                        thumbnailPreview.innerHTML = `<img src="${this.result}" alt="Thumbnail Preview" style="max-width: 100%;">`;
+                    });
+                    
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+        
+        // Logout Function
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            localStorage.removeItem('adminAuthenticated');
+            window.location.href = 'admin-a24.html';
+        });
+        
+        // Portfolio Form Submission (Demo)
+        const portfolioForm = document.getElementById('portfolioForm');
+        
+        portfolioForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real implementation, this would send the form data to a server
+            alert('This is a demo - in a real implementation, this portfolio item would be added to the database.');
+            
+            // Reset form
+            portfolioForm.reset();
+            document.getElementById('thumbnailPreview').innerHTML = '';
+        });
+        
+        // Edit Button (Demo)
+        const editButtons = document.querySelectorAll('.edit-btn');
+        
+        editButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('This is a demo - in a real implementation, this would open an edit form for the selected portfolio item.');
+            });
+        });
+        
+        // Delete Button (Demo)
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (confirm('Are you sure you want to delete this portfolio item?')) {
+                    alert('This is a demo - in a real implementation, this portfolio item would be deleted from the database.');
+                }
+            });
+        });
+        
+        // View Button (Demo)
+        const viewButtons = document.querySelectorAll('.view-btn');
+        
+        viewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                window.open('portfolio-a24.html', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
