@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryWork - Film Director & Photographer</title>
+    <link rel="stylesheet" href="css/a24-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">STORYWORK</a>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="img/hero-bg.jpg" alt="Hero Background" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">CINEMATIC STORYTELLING</h1>
+            <p class="hero-subtitle">Award-winning film director and photographer creating compelling visual narratives for global brands and audiences.</p>
+        </div>
+        <a href="#portfolio" class="hero-scroll">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="section-title">RECENT WORKS</h2>
+        <div class="portfolio-grid">
+            <!-- Portfolio Item 1 -->
+            <a href="portfolio.html" class="portfolio-item">
+                <img src="img/portfolio/placeholder1.jpg" alt="Portfolio Item 1" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-title">Brand Campaign</h3>
+                    <span class="portfolio-category">TVC</span>
+                    <span class="portfolio-year">2025</span>
+                </div>
+            </a>
+            
+            <!-- Portfolio Item 2 -->
+            <a href="portfolio.html" class="portfolio-item">
+                <img src="img/portfolio/placeholder2.jpg" alt="Portfolio Item 2" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-title">Music Video</h3>
+                    <span class="portfolio-category">Music Video</span>
+                    <span class="portfolio-year">2024</span>
+                </div>
+            </a>
+            
+            <!-- Portfolio Item 3 -->
+            <a href="portfolio.html" class="portfolio-item">
+                <img src="img/portfolio/placeholder3.jpg" alt="Portfolio Item 3" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-title">Short Film</h3>
+                    <span class="portfolio-category">Short Film</span>
+                    <span class="portfolio-year">2024</span>
+                </div>
+            </a>
+            
+            <!-- Portfolio Item 4 -->
+            <a href="portfolio.html" class="portfolio-item">
+                <img src="img/portfolio/placeholder4.jpg" alt="Portfolio Item 4" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-title">Product Launch</h3>
+                    <span class="portfolio-category">TVC</span>
+                    <span class="portfolio-year">2023</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2 class="section-title">VIDEO PORTFOLIO</h2>
+        <div class="video-categories">
+            <button class="video-category active">All</button>
+            <button class="video-category">TVC</button>
+            <button class="video-category">Music Video</button>
+            <button class="video-category">Short Film</button>
+            <button class="video-category">Presentation</button>
+            <button class="video-category">Web Film</button>
+        </div>
+        <div class="video-grid">
+            <!-- Video Item 1 -->
+            <div class="video-item" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                <img src="img/portfolio/placeholder5.jpg" alt="Video Thumbnail 1" class="video-thumbnail">
+                <div class="video-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div class="video-overlay">
+                    <h3 class="video-title">Luxury Brand Campaign</h3>
+                    <p class="video-info">TVC • 2025</p>
+                </div>
+            </div>
+            
+            <!-- Video Item 2 -->
+            <div class="video-item" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                <img src="img/portfolio/placeholder6.jpg" alt="Video Thumbnail 2" class="video-thumbnail">
+                <div class="video-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div class="video-overlay">
+                    <h3 class="video-title">Artist Collaboration</h3>
+                    <p class="video-info">Music Video • 2024</p>
+                </div>
+            </div>
+            
+            <!-- Video Item 3 -->
+            <div class="video-item" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                <img src="img/portfolio/placeholder7.jpg" alt="Video Thumbnail 3" class="video-thumbnail">
+                <div class="video-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div class="video-overlay">
+                    <h3 class="video-title">Documentary Short</h3>
+                    <p class="video-info">Short Film • 2024</p>
+                </div>
+            </div>
+            
+            <!-- Video Item 4 -->
+            <div class="video-item" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                <img src="img/portfolio/placeholder8.jpg" alt="Video Thumbnail 4" class="video-thumbnail">
+                <div class="video-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div class="video-overlay">
+                    <h3 class="video-title">Corporate Event</h3>
+                    <p class="video-info">Presentation • 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="gallery-section">
+        <h2 class="section-title">PHOTOGRAPHY</h2>
+        <div class="gallery-grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item">
+                <img src="img/gallery/commercial1.jpg" alt="Gallery Image 1" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Product Campaign</h3>
+                    <p class="gallery-category">Commercial</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item">
+                <img src="img/gallery/keyvisual1.jpg" alt="Gallery Image 2" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Brand Identity</h3>
+                    <p class="gallery-category">Key Visual</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item">
+                <img src="img/gallery/portrait1.jpg" alt="Gallery Image 3" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Celebrity Portrait</h3>
+                    <p class="gallery-category">Portrait</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item">
+                <img src="img/gallery/landscape1.jpg" alt="Gallery Image 4" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Location Scouting</h3>
+                    <p class="gallery-category">Landscape</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <img src="img/about/profile.jpg" alt="Director Profile" class="about-image">
+            <div class="about-content">
+                <h2>ABOUT ME</h2>
+                <div class="about-text">
+                    <p>I am a film director and photographer based in Bangkok, specializing in creating compelling visual narratives for global brands and audiences. With over 10 years of experience in the industry, I've developed a distinctive style that combines cinematic storytelling with striking visuals.</p>
+                    <p>My work spans across commercial campaigns, music videos, short films, and photography projects. I believe in the power of visual storytelling to evoke emotions and create meaningful connections with viewers.</p>
+                </div>
+                <div class="about-info">
+                    <div class="info-item">
+                        <div class="info-label">Experience</div>
+                        <div class="info-value">10+ Years</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Location</div>
+                        <div class="info-value">Bangkok, Thailand</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Expertise</div>
+                        <div class="info-value">TVC, Music Videos, Short Films</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">info@storyworkbkk.com</div>
+                    </div>
+                </div>
+                <a href="about.html" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="index.html" class="footer-logo">STORYWORK</a>
+            <ul class="footer-nav">
+                <li class="footer-nav-item"><a href="index.html" class="footer-nav-link">Home</a></li>
+                <li class="footer-nav-item"><a href="portfolio.html" class="footer-nav-link">Portfolio</a></li>
+                <li class="footer-nav-item"><a href="gallery.html" class="footer-nav-link">Gallery</a></li>
+                <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">About</a></li>
+                <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">&copy; 2025 StoryWork. All rights reserved.</div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-vimeo-v"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <iframe class="modal-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <img src="" alt="Gallery Image" class="modal-image">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Video Category Filter
+        const videoCategories = document.querySelectorAll('.video-category');
+        
+        videoCategories.forEach(category => {
+            category.addEventListener('click', () => {
+                // Remove active class from all categories
+                videoCategories.forEach(cat => cat.classList.remove('active'));
+                // Add active class to clicked category
+                category.classList.add('active');
+                
+                // Filter logic would go here in a real implementation
+            });
+        });
+        
+        // Video Modal
+        const videoItems = document.querySelectorAll('.video-item');
+        const videoModal = document.getElementById('videoModal');
+        const videoIframe = document.querySelector('.modal-video');
+        const videoModalClose = videoModal.querySelector('.modal-close');
+        
+        videoItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const videoSrc = item.getAttribute('data-video');
+                videoIframe.setAttribute('src', videoSrc);
+                videoModal.classList.add('active');
+            });
+        });
+        
+        videoModalClose.addEventListener('click', () => {
+            videoModal.classList.remove('active');
+            videoIframe.setAttribute('src', '');
+        });
+        
+        // Gallery Modal
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const galleryModal = document.getElementById('galleryModal');
+        const galleryImage = document.querySelector('.modal-image');
+        const galleryModalClose = galleryModal.querySelector('.modal-close');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('.gallery-image').getAttribute('src');
+                galleryImage.setAttribute('src', imgSrc);
+                galleryModal.classList.add('active');
+            });
+        });
+        
+        galleryModalClose.addEventListener('click', () => {
+            galleryModal.classList.remove('active');
+        });
+        
+        // Close modals when clicking outside content
+        window.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                videoModal.classList.remove('active');
+                videoIframe.setAttribute('src', '');
+            }
+            if (e.target === galleryModal) {
+                galleryModal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
